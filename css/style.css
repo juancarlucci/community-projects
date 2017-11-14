@@ -1,0 +1,335 @@
+:root {
+  // Color Scheme
+  --background-color: #FFF;
+  --main-color: #89c63b;
+  --secondary-color: #fbcc02;
+  --accent-color: #005bab;
+
+  // Sizing/* --base: 16px;
+  --tiny-spacing: var(--base * 0.25);
+  --small-spacing: var(--base * 0.5);
+  --default-spacing: var(--base);
+  --large-spacing: var(--base * 2);
+  */
+
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  background-color: var(--secondary-color);
+  /*padding-bottom: 6rem;
+  */
+  /*min-height: 100%;
+  */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+#map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+#logoImg {
+  position: absolute;
+  z-index: 1001;
+  top: 21px;
+  left: 116px;
+}
+.leaflet-control-attribution {
+  padding-bottom: 7px;
+  position: relative;
+}
+.leaflet-touch .leaflet-bar a {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+}
+.leaflet-container .leaflet-control-search {
+  margin-right: 12px;
+}
+/*.leaflet-left .leaflet-control {
+  margin-left: 220px;
+  top: 221px;
+  box-shadow: 0 0px 5px #89c63b;
+  margin-left: 116px;
+}
+*/
+.leaflet-popup-content {
+  /* change size of margin */
+  margin: 14px 14px;
+  /* make the line height smaller */
+  line-height: 1.4;
+}
+#legend-wrapper {
+  position: relative;
+  margin: 0;
+  top: 60px;
+  visibility: hidden;
+  /*padding-bottom: 6rem;
+  */
+  /*min-height: 100%;
+  */
+}
+#project-title {
+  position: absolute;
+  margin-left: 10px;
+  z-index: 1000;
+  left: 300px;
+  height: 165px;
+  width: 275px;
+  /*height: auto;
+  */
+  top: 59px;
+  /*border-top: 15px solid var(--secondary-color);
+  */
+  margin-left: -282px;
+  overflow-y: auto;
+  background: var(--secondary-color);
+  font-size: .75em;
+}
+.pill .button .stroke .icon .home {
+  background: var(--main-color) !important;
+}
+.button.stroke {
+  color: var(--main-color);
+}
+#category-title {
+  position: absolute;
+  margin-left: 10px;
+  z-index: 1000;
+  left: 300px;
+  height: auto;
+  max-height: 300px;
+  width: 275px;
+  top: 245px;
+  /*border-top: 15px solid var(--secondary-color);
+  */
+  margin-left: -282px;
+  overflow-y: auto;
+  background: var(--secondary-color);
+  padding-left: 10px;
+}
+#category-title span {
+  color
+}
+
+#project-title, #category-title > h1, h2 {
+  color: var(--main-color);
+  padding: 10px;
+  text-align: center;
+}
+#project-title .pill {
+  margin-top: 17px;
+}
+figcaption {
+  color: var(--main-color);
+}
+.leaflet-popup-content-wrapper {
+  color: var(--background-color);
+  background: var(--main-color);
+  width: 180px;
+  height: 109px;
+}
+.intro-popup .leaflet-popup-tip-container {
+  width: 0;
+  height: 0;
+}
+.intro-popup p {
+  margin: 0px 0;
+}
+#circularTitle {
+  color: var(--background-color);
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--main-color);
+  text-align: center;
+  margin: 20px;
+  font-size: .75em;
+  display: table-cell;
+  top: 250px;
+  position: absolute;
+  z-index: 1000;
+}
+#circularTitle h1 {
+  padding: 55px 0px 0px 0px;
+}
+#logo {
+  border-radius: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.leaflet-popup-content strong {
+  color: var(--accent-color);
+}
+.loader,.loader:before,.loader:after {
+  background: var(--main-color);
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader:before,.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader {
+  color: #fce064;
+  text-indent: -9999em;
+  position: absolute;
+  left: 50vw;
+  top: 45vh;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,80%,100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,80%,100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@media only screen and (max-width: 760px) {
+  #map {
+    height: 71%;
+    top: 14%;
+  }
+  #category-title {
+    top: 85%;
+    min-height: 5%;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    padding-top: 0;
+    margin-left: 0px;
+    font-size: 0.55em;
+  }
+  #category-title h2 {
+    text-align: left;
+  }
+  #project-title {
+    top: 0%;
+    width: 100%;
+    height: 101px;
+    position: fixed;
+    margin-left: -300px;
+  }
+  #project-title h1, h2 {
+    font-size: 1.75em;
+  }
+  #project-title.collapse {
+    height: 35px;
+    overflow: hidden;
+  }
+  #project-title .pill {
+    margin-top: 0px;
+  }
+  h1 {
+    font-size: 1.75em;
+    line-height: 1em;
+    margin-top: 3px !important;
+  }
+  #logoImg {
+    position: absolute;
+    z-index: 1001;
+    top: 0px;
+    left: 0px;
+  }
+  .leaflet-bottom .leaflet-right {
+    height: 16px;
+  }
+  .leaflet-control-attribution {
+    font-size: 8px !important;
+    height: 13px;
+    width:100%;
+  }
+  .leaflet-top .leaflet-control {
+    margin-top: 114px;
+  }
+  .leaflet-container .leaflet-control-search {
+    margin-top: 15px;
+    margin-left: 2px;
+  }
+
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 824px) and (orientation:landscape) {
+
+    #map {
+      height: 70%;
+      top: 14%;
+    }
+    #project-title {
+      height: 54px;
+    }
+    #project-title h4 {
+      display: none;
+    }
+    hgroup {
+      display: flex;
+    }
+    h1 {
+      margin-top: 10px !important;
+    }
+    .pill {
+      padding-left: 10px;
+    }
+
+  }
+  /* change color when the cursor hovers over the popup close button */
+  .leaflet-container a.leaflet-popup-close-button:hover {
+    color: var(--main-color);
+  }
+  /* change color of an unvisited link and the zoom symbols */
+  a:link {
+    color: var(--main-color);
+  }
+  /* change color of a visited link */
+  a:visited {
+    color: var(--main-color);
+  }
+  /* change color when the cursor hovers over a link */
+  a:hover {
+    color: var(--accent-color);
+  }
+  
