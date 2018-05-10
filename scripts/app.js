@@ -124,24 +124,24 @@ function myFunction() {
         simpleSheet: true
     })
 
-    
+
 
     // function openContactForm () {
     //  var formConent = $('#form-content');
     //  this.formConent.addEventListener('click', function(e){
     //      formConent.addClass('expand');
     //  });
-        
+
     // }
     // openContactForm();
-    
+
 
     function initInfoPopup(info, coordinates) {
         L.popup({
                 className: "intro-popup"
             })
             .setLatLng(map.getCenter())
-            .setContent("<p>Welcome to Project Petals</p>" + "<br/><img id='logo' src='images/PP1.png' alt='Project Petals logo png' width='50px'/>")
+            .setContent("<p>Welcome to Community Projects Map</p>" + "<br/><img id='logo' src='images/cpm.png' alt='Community Projects Map logo png' width='50px'/>")
             .openOn(map);
 
     }
@@ -163,6 +163,3 @@ function myFunction() {
    }
 
 } //myFunction end
-
-
-

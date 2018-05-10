@@ -1,3 +1,7 @@
+/* /////////////////////////////////////////////
+///////Form originally created by Joe Harry. MIT licence.
+///////////////////////////////////////////// */
+
 .form-overlay {
   width: 0%;
   height: 100%;
@@ -17,6 +21,7 @@
   -webkit-transition: background 1s, opacity 0.4s, width 0s;
   transition: background 1s, opacity 0.4s, width 0s;
 }
+
 .show-form-overlay.form-submitted .form-overlay {
   background: #119DA4;
   -webkit-transition: background 0.6s;
@@ -30,9 +35,9 @@
   z-index: 1001;
   position: absolute;
   margin: 0 auto;
-  left: 0;
+  left: 80%;
   right: 0;
-  bottom: 3vh;
+  bottom: 6vh;
   background-color: #89c63b;
   overflow: hidden;
   border-radius: 50%;
@@ -44,7 +49,9 @@
   -webkit-transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
   transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
 }
+
 #form-container.expand {
+  left: 0;
   cursor: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
   border-radius: 0;
@@ -71,7 +78,7 @@
 
 .icon:hover::before {
   -webkit-animation: wiggle 0.6s linear 3;
-          animation: wiggle 0.6s linear 3;
+  animation: wiggle 0.6s linear 3;
 }
 
 .fa-pencil::before {
@@ -89,13 +96,13 @@
 .expand.fa-close::before {
   display: block;
   -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
 #form-content {
   font-family: Helvetica, sans-serif;
   -webkit-transform: translateY(150%);
-          transform: translateY(150%);
+  transform: translateY(150%);
   width: 100%;
   opacity: 0;
   text-align: left;
@@ -104,15 +111,17 @@
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s, -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 #form-content.expand {
   -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  transform: translateY(0px);
   opacity: 1;
   -webkit-transition: opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   transition: opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0s;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0s, -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
+
 #form-content form {
   color: #fbcc02;
   width: 100%;
@@ -132,24 +141,30 @@
   -webkit-transition: all 0.8s 0.6s;
   transition: all 0.8s 0.6s;
 }
-#form-head h1, #form-head p {
+
+#form-head h1,
+#form-head p {
   padding: 0;
   margin: 0;
 }
+
 #form-head .pre {
   display: block;
 }
+
 #form-head .post {
   display: none;
 }
 
 .form-submitted#form-head {
   -webkit-transform: translateY(250%);
-          transform: translateY(250%);
+  transform: translateY(250%);
 }
+
 .form-submitted#form-head .pre {
   display: none;
 }
+
 .form-submitted#form-head .post {
   display: block;
 }
@@ -167,7 +182,7 @@
   outline: none;
   box-shadow: none;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 ::-webkit-input-placeholder {
@@ -176,37 +191,49 @@
   font-size: 90%;
 }
 
+
 /* Firefox 18- */
+
 :-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 90%;
 }
 
+
 /* Firefox 19+ */
+
 ::-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 90%;
 }
 
+
 /* IE 10+ */
+
 :-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 90%;
 }
 
+
 /* Edge */
+
 ::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-size: 90%;
 }
 
+
 /* Default */
+
 :placeholder-shown {
   color: rgba(255, 255, 255, 0.8);
   font-size: 90%;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   color: #fbcc02;
 }
 
@@ -227,6 +254,7 @@ input, select, textarea {
   transition: all 0.1s, transform 0s 0.6s;
   transition: all 0.1s, transform 0s 0.6s, -webkit-transform 0s 0.6s;
 }
+
 .input.submit:active {
   margin-top: 15px;
   box-shadow: 0 0 rgba(0, 0, 0, 0.5);
@@ -234,7 +262,7 @@ input, select, textarea {
 
 .input.form-error {
   -webkit-animation: error 0.8s ease;
-          animation: error 0.8s ease;
+  animation: error 0.8s ease;
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -261,39 +289,42 @@ select option:disabled {
 
 .form-submitted .input {
   -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  transform: translateX(150%);
   opacity: 0;
   -webkit-transition: all 0.5s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   transition: all 0.5s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   transition: all 0.5s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   transition: all 0.5s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
+
 .form-submitted .input:nth-child(1) {
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
+
 .form-submitted .input:nth-child(2) {
   -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
+
 .form-submitted .input:nth-child(3) {
   -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
+
 .form-submitted .input:nth-child(4) {
   -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
+
 .form-submitted .input:nth-child(5) {
   -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
 }
-
-
 
 @media (max-width: 600px) {
   #form-container.expand {
@@ -304,16 +335,13 @@ input:-webkit-autofill {
     overflow-x: hidden;
     bottom: 0;
   }
-
   h1 {
     font-size: 300%;
   }
-
   .icon:hover::before {
     -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
-
   .form-overlay {
     display: none;
     -webkit-transition: none;
@@ -322,62 +350,83 @@ input:-webkit-autofill {
 }
 
 @-webkit-keyframes error {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
-  10%, 30%, 50%, 70%, 90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: translateX(-6px);
-            transform: translateX(-6px);
+    transform: translateX(-6px);
   }
-  20%, 40%, 60%, 80% {
+  20%,
+  40%,
+  60%,
+  80% {
     -webkit-transform: translateX(6px);
-            transform: translateX(6px);
+    transform: translateX(6px);
   }
 }
+
 @keyframes error {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
-  10%, 30%, 50%, 70%, 90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: translateX(-6px);
-            transform: translateX(-6px);
+    transform: translateX(-6px);
   }
-  20%, 40%, 60%, 80% {
+  20%,
+  40%,
+  60%,
+  80% {
     -webkit-transform: translateX(6px);
-            transform: translateX(6px);
+    transform: translateX(6px);
   }
 }
+
 @-webkit-keyframes wiggle {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   50% {
     -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
   }
 }
+
 @keyframes wiggle {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   50% {
     -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    transform: rotate(15deg);
   }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 824px) and (orientation:landscape) {
-
-    #form-container {
+  #form-container {
     display: none;
-    }
   }
+}
 
-
-
-
-
+@media only screen and (max-device-width: 481px) {
+  #form-container {
+    bottom: 3vh;
+  }
+}

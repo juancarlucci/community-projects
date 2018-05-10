@@ -1,11 +1,11 @@
 :root {
-  // Color Scheme
-  --background-color: #FFF;
+  /* // Color Scheme */
+  --background-color: #ffffff;
   --main-color: #89c63b;
   --secondary-color: #fbcc02;
   --accent-color: #005bab;
 
-  // Sizing/* --base: 16px;
+  /* // Sizing/* --base: 16px; */
   --tiny-spacing: var(--base * 0.25);
   --small-spacing: var(--base * 0.5);
   --default-spacing: var(--base);
@@ -26,10 +26,6 @@ body {
   position: relative;
   margin: 0;
   background-color: var(--secondary-color);
-  /*padding-bottom: 6rem;
-  */
-  /*min-height: 100%;
-  */
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 #map {
@@ -56,13 +52,6 @@ body {
 .leaflet-container .leaflet-control-search {
   margin-right: 12px;
 }
-/*.leaflet-left .leaflet-control {
-  margin-left: 220px;
-  top: 221px;
-  box-shadow: 0 0px 5px #89c63b;
-  margin-left: 116px;
-}
-*/
 .leaflet-popup-content {
   /* change size of margin */
   margin: 14px 14px;
@@ -74,26 +63,17 @@ body {
   margin: 0;
   top: 60px;
   visibility: hidden;
-  /*padding-bottom: 6rem;
-  */
-  /*min-height: 100%;
-  */
 }
 #project-title {
   position: absolute;
-  margin-left: 10px;
   z-index: 1000;
   left: 300px;
-  height: 165px;
-  width: 275px;
-  /*height: auto;
-  */
-  top: 59px;
-  /*border-top: 15px solid var(--secondary-color);
-  */
-  margin-left: -282px;
+  height: 105px;
+  width: 100%;
+  top: -60px;
+  margin-left: -300px;
   overflow-y: auto;
-  background: var(--secondary-color);
+  background-color: var(--background-color);
   font-size: .75em;
 }
 .pill .button .stroke .icon .home {
@@ -111,15 +91,13 @@ body {
   max-height: 300px;
   width: 275px;
   top: 245px;
-  /*border-top: 15px solid var(--secondary-color);
-  */
   margin-left: -282px;
   overflow-y: auto;
-  background: var(--secondary-color);
+  background-color: var(--background-color);
   padding-left: 10px;
 }
 #category-title span {
-  color
+  color: var(--accent-color);
 }
 
 #project-title, #category-title > h1, h2 {
@@ -137,14 +115,16 @@ figcaption {
   color: var(--background-color);
   background: var(--main-color);
   width: 180px;
-  height: 109px;
+  height: 120px;
 }
 .intro-popup .leaflet-popup-tip-container {
   width: 0;
   height: 0;
 }
 .intro-popup p {
+  color: var(--accent-color);
   margin: 0px 0;
+  text-align: center;
 }
 #circularTitle {
   color: var(--background-color);
@@ -171,7 +151,7 @@ figcaption {
   margin-top: 0px;
   margin-bottom: 15px;
 }
-.leaflet-popup-content strong {
+.leaflet-popup-content {
   color: var(--accent-color);
 }
 .loader,.loader:before,.loader:after {
@@ -251,7 +231,7 @@ figcaption {
   #project-title {
     top: 0%;
     width: 100%;
-    height: 101px;
+    height: 90px;
     position: fixed;
     margin-left: -300px;
   }
@@ -332,4 +312,3 @@ figcaption {
   a:hover {
     color: var(--accent-color);
   }
-  
